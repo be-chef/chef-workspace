@@ -1,0 +1,12 @@
+{
+  "name": "chef-react-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "projectType": "application",
+    "sourceRoot": "apps/chef-react-e2e/src",
+    "implicitDependencies": [
+      "chef-react"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@chef-workspace/chef-react",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "chef-react",
+    "projectType": "application",
+    "sourceRoot": "apps/chef-react/src"
+  }
+}

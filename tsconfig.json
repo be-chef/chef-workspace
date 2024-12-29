@@ -8,6 +8,14 @@
     },
     {
       "path": "./apps/chef-react"
+    },
+    {
+      "path": "./slushy"
     }
-  ]
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
 }

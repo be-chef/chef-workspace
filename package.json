@@ -69,7 +69,6 @@
   "workspaces": [
     "libs/**",
     "packages/**",
-    "apps/**",
-    "slushy"
+    "apps/**"
   ]
 }

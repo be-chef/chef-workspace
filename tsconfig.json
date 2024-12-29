@@ -10,7 +10,7 @@
       "path": "./apps/chef-react"
     },
     {
-      "path": "./slushy"
+      "path": "./libs/slushy"
     }
   ],
   "ts-node": {

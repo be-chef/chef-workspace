@@ -4,7 +4,7 @@
   "nx": {
     "name": "slushy",
     "projectType": "library",
-    "sourceRoot": "slushy/src"
+    "sourceRoot": "libs/slushy/src"
   },
   "exports": {
     "./package.json": "./package.json",

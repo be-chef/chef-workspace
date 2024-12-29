@@ -12,5 +12,10 @@
     {
       "path": "./slushy"
     }
-  ]
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
 }

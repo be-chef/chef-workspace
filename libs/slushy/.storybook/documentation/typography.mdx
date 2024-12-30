@@ -1,0 +1,66 @@
+import { Meta, Title, Unstyled } from '@storybook/blocks';
+
+<Meta title="Foundations/Typography" />
+
+<Unstyled>
+# Typography
+
+We have defined the typography foundation for Slushy with **IBM Plex Serif** font ensuring consistency in typography styles across different components.
+
+## Global Typography Styles
+
+The following CSS rules apply the IBM Plex Serif font globally across the app:
+
+### 1. **Base Font Style**
+All elements use the **IBM Plex Serif** font by default with a regular weight of 400 and normal style.
+
+```css
+* {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400; /* Default regular weight */
+    font-style: normal;
+}
+```
+
+### 2. **Body Text**
+The body text inherits the default font style, which is regular weight (400) and normal style.
+
+```css
+body {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+}
+```
+
+### 3. **Headings**
+Headings (`h1`, `h2`, `h3`, `h4`, `h5`, `h6`) use a **semibold** weight (600) for a stronger emphasis and differentiation from the body text.
+
+```css
+h1, h2, h3, h4, h5, h6 {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 600; /* Semibold weight for headings */
+}
+```
+
+### 4. **Paragraphs**
+Paragraphs (`p`) are styled with a regular weight (400) to keep them consistent with the body text.
+
+```css
+p {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 400; /* Regular weight for paragraphs */
+}
+```
+
+### 5. **Emphasized Text**
+Emphasized text, such as `<em>` and `<i>`, is styled with a **light** weight (300) and **italic** style for a more subtle emphasis.
+
+```css
+em, i {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: 300; /* Light weight for emphasized text */
+    font-style: italic;
+}
+```
+</Unstyled>

@@ -5,6 +5,8 @@ on:
 
 jobs:
   chromatic:
+    env:
+        CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,5 +23,3 @@ jobs:
       - uses: nrwl/nx-set-shas@v4
 
       - run: npx nx chromatic slushy --skip-nx-cache
-        env:
-            CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

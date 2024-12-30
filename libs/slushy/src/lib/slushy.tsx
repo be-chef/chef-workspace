@@ -1,8 +1,7 @@
-import styles from './slushy.module.scss';
 
 export function Slushy() {
   return (
-    <div className={styles['container']}>
+    <div className="hello-world">
       <h1>Welcome to Slushy!</h1>
     </div>
   );

@@ -1,0 +1,99 @@
+import { ColorPalette, ColorItem, Meta, Title, Subtitle } from '@storybook/blocks';
+import { getCSSVariable } from './helper.ts';
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+Basic color palette for Slushy component catalog.
+
+  <ColorPalette>
+    <ColorItem
+      title="Grays"
+      subtitle="Some of the grays"
+      colors={{
+        'grey-50': getCSSVariable('--grey-50'),
+        'grey-100': getCSSVariable('--grey-100'),
+        'grey-200': getCSSVariable('--grey-200'),
+        'grey-300': getCSSVariable('--grey-300'),
+        'grey-400': getCSSVariable('--grey-400'),
+        'grey-500': getCSSVariable('--grey-500'),
+        'grey-600': getCSSVariable('--grey-600'),
+        'grey-700': getCSSVariable('--grey-700'),
+        'grey-800': getCSSVariable('--grey-800'),
+        'grey-900': getCSSVariable('--grey-900'),
+      }}
+    />
+    <ColorItem
+      title="Blues"
+      subtitle="Some of the blues"
+      colors={{
+        'blue-50': getCSSVariable('--blue-50'),
+        'blue-100': getCSSVariable('--blue-100'),
+        'blue-200': getCSSVariable('--blue-200'),
+        'blue-300': getCSSVariable('--blue-300'),
+        'blue-400': getCSSVariable('--blue-400'),
+        'blue-500': getCSSVariable('--blue-500'),
+        'blue-600': getCSSVariable('--blue-600'),
+        'blue-700': getCSSVariable('--blue-700'),
+        'blue-800': getCSSVariable('--blue-800'),
+        'blue-900': getCSSVariable('--blue-900'),
+      }}
+    />
+    <ColorItem
+      title="Reds"
+      subtitle="Some of the reds"
+      colors={{
+        'red-50': getCSSVariable('--red-50'),
+        'red-100': getCSSVariable('--red-100'),
+        'red-200': getCSSVariable('--red-200'),
+        'red-300': getCSSVariable('--red-300'),
+        'red-400': getCSSVariable('--red-400'),
+        'red-500': getCSSVariable('--red-500'),
+        'red-600': getCSSVariable('--red-600'),
+        'red-700': getCSSVariable('--red-700'),
+        'red-800': getCSSVariable('--red-800'),
+        'red-900': getCSSVariable('--red-900'),
+      }}
+    />
+    <ColorItem
+      title="Greens"
+      subtitle="Some of the greens"
+      colors={{
+        'green-50': getCSSVariable('--green-50'),
+        'green-100': getCSSVariable('--green-100'),
+        'green-200': getCSSVariable('--green-200'),
+        'green-300': getCSSVariable('--green-300'),
+        'green-400': getCSSVariable('--green-400'),
+        'green-500': getCSSVariable('--green-500'),
+        'green-600': getCSSVariable('--green-600'),
+        'green-700': getCSSVariable('--green-700'),
+        'green-800': getCSSVariable('--green-800'),
+        'green-900': getCSSVariable('--green-900'),
+      }}
+    />
+    <ColorItem
+      title="Yellows"
+      subtitle="Some of the yellows"
+      colors={{
+        'yellow-50': getCSSVariable('--yellow-50'),
+        'yellow-100': getCSSVariable('--yellow-100'),
+        'yellow-200': getCSSVariable('--yellow-200'),
+        'yellow-300': getCSSVariable('--yellow-300'),
+        'yellow-400': getCSSVariable('--yellow-400'),
+        'yellow-500': getCSSVariable('--yellow-500'),
+        'yellow-600': getCSSVariable('--yellow-600'),
+        'yellow-700': getCSSVariable('--yellow-700'),
+        'yellow-800': getCSSVariable('--yellow-800'),
+        'yellow-900': getCSSVariable('--yellow-900'),
+      }}
+    />
+    <ColorItem
+      title="Basic Colors"
+      subtitle="White and Black"
+      colors={{
+        white: getCSSVariable('--white'),
+        black: getCSSVariable('--black'),
+      }}
+    />
+  </ColorPalette>

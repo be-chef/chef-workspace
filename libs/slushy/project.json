@@ -1,0 +1,14 @@
+{
+    "name": "slushy",
+    "projectType": "library",
+    "sourceRoot": "libs/slushy/src",
+    "targets": {
+        "chromatic": {
+            "executor": "nx:run-commands",
+            "dependsOn": ["build-storybook"],
+            "options": {
+                "command": "npx chromatic --storybook-build-dir libs/slushy/storybook-static"
+              }
+        }
+    }
+}

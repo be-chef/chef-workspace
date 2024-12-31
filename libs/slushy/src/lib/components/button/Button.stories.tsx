@@ -2,7 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Button from './Button';
 import { ComponentProps } from 'react';
 
-type StoryProps = ComponentProps<typeof Button>;
+type StoryProps = ComponentProps<typeof Button> & {
+  buttonText: string;
+};
 
 /**
  * <Unstyled>
@@ -45,6 +47,26 @@ type StoryProps = ComponentProps<typeof Button>;
 const meta: Meta<typeof Button> = {
   component: Button,
   title: 'Button',
+  argTypes: {
+    variant: {
+      options: ['primary', 'secondary', 'danger', 'warning', 'info', 'success', 'disabled'],
+      control: {
+        type: 'select',
+      },
+    },
+    size: {
+      options: ['sm', 'md', 'lg', 'xlg'],
+      control: {
+        type: 'select',
+      },
+    },
+    states : {
+      options : ['default','hover','active','disabled'],
+      control: {
+        type: 'select',
+      },
+    }
+  },
 };
 export default meta;
 
@@ -52,10 +74,12 @@ type Story = StoryObj<StoryProps>;
 
 export const Primary: Story = {
   args: {
+    buttonText: 'Are you sure?',
     variant : 'primary',
-    size : 'lg'
+    size : 'lg',
+    states: 'active'
   },
-  render : (args) => {
-    return <Button {...args}>Click here!!</Button>
+  render : ({buttonText, ...args}) => {
+    return <Button {...args}>{buttonText}</Button>
   }
 };

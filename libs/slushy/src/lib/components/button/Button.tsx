@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps>= ({children, variant, size, states, onClick}
 
   const style: CSSProperties = {
     padding: size === 'sm' ? '8px 12px' : size === 'md' ? '12px 16px' : '16px 20px',
-    backgroundColor: variant === 'primary' ? 'var(--blue-50)' : 'var(--grey-700)',
+    backgroundColor: variant === 'primary' ? 'var(--blue-500)' : 'var(--grey-700)',
     color: 'white',
     border: 'none',
     borderRadius: '4px',

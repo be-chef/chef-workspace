@@ -11,6 +11,9 @@
     },
     {
       "path": "./libs/slushy"
+    },
+    {
+      "path": "./apps/chef-express"
     }
   ],
   "ts-node": {

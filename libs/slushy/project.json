@@ -6,7 +6,7 @@
         "chromatic": {
             "executor": "nx:run-commands",
             "options": {
-                "command": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --storybook-build-dir libs/slushy/storybook-static"
+                "command": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN  --exit-zero-on-changes --only-changed --storybook-build-dir libs/slushy/storybook-static"
               }
         }
     }

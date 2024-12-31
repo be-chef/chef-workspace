@@ -22,4 +22,7 @@ jobs:
       - run: npm ci --legacy-peer-deps
       - uses: nrwl/nx-set-shas@v4
 
-      - run: npx nx chromatic slushy --skip-nx-cache
+      - run: 
+          |
+          echo $CHROMATIC_PROJECT_TOKEN
+          npx nx chromatic slushy --skip-nx-cache

@@ -13,9 +13,6 @@
       "path": "./libs/slushy"
     },
     {
-      "path": "./apps/chef-express-e2e"
-    },
-    {
       "path": "./apps/chef-express"
     }
   ],

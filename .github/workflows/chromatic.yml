@@ -32,7 +32,10 @@ jobs:
         uses: nrwl/nx-set-shas@v4
 
       - name: Publish Slushy to Chromatic
-        run: npx nx chromatic slushy --skip-nx-cache
+        run: 
+          |
+          npx nx build-storybook slushy --skip-nx-cache
+          npx nx chromatic slushy --skip-nx-cache
         env:
           CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 

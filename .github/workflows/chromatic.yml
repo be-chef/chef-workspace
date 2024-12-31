@@ -1,10 +1,7 @@
 name: Chromatic Build
 
 on:
-  pull_request_target:
-    types:
-      - synchronize
-      - opened
+  pull_request:
     branches:
       - main
     paths:

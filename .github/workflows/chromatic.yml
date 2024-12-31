@@ -1,12 +1,12 @@
 name: Chromatic Build
 
 on:
-  pull_request:
+  pull_request_target:
+    branches:
+      - main
 
 jobs:
   chromatic:
-    env:
-      CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

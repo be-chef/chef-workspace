@@ -55,13 +55,7 @@ const meta: Meta<typeof Button> = {
       },
     },
     size: {
-      options: ['sm', 'md', 'lg', 'xlg'],
-      control: {
-        type: 'select',
-      },
-    },
-    states : {
-      options : ['default','hover','active','disabled'],
+      options: ['small', 'medium', 'large', 'xlarge'],
       control: {
         type: 'select',
       },
@@ -76,8 +70,29 @@ export const Primary: Story = {
   args: {
     buttonText: 'Are you sure?',
     variant : 'primary',
-    size : 'lg',
-    states: 'active'
+    size : 'small'
+  },
+  render : ({buttonText, ...args}) => {
+    return <Button {...args}>{buttonText}</Button>
+  }
+};
+
+export const secondary: Story = {
+  args: {
+    buttonText: 'Are you sure?',
+    variant : 'secondary',
+    size : 'small'
+  },
+  render : ({buttonText, ...args}) => {
+    return <Button {...args}>{buttonText}</Button>
+  }
+};
+
+export const success: Story = {
+  args: {
+    buttonText: 'Are you sure?',
+    variant : 'success',
+    size : 'small'
   },
   render : ({buttonText, ...args}) => {
     return <Button {...args}>{buttonText}</Button>

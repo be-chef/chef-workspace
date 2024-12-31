@@ -62,7 +62,8 @@
       "plugin": "@nx/jest/plugin",
       "options": {
         "targetName": "test"
-      }
+      },
+      "exclude": ["apps/chef-express-e2e/**/*"]
     },
     {
       "plugin": "@nx/vite/plugin",

@@ -1,0 +1,36 @@
+{
+  "name": "@chef-workspace/chef-express",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "chef-express",
+    "projectType": "application",
+    "sourceRoot": "apps/chef-express/src",
+    "targets": {
+      "serve": {
+        "executor": "@nx/js:node",
+        "defaultConfiguration": "development",
+        "dependsOn": [
+          "build"
+        ],
+        "options": {
+          "buildTarget": "chef-express:build",
+          "runBuildTargetDependencies": false
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "chef-express:build:development"
+          },
+          "production": {
+            "buildTarget": "chef-express:build:production"
+          }
+        }
+      },
+      "test": {
+        "options": {
+          "passWithNoTests": true
+        }
+      }
+    }
+  }
+}

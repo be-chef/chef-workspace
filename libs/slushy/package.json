@@ -16,5 +16,8 @@
   "types": "./dist/index.d.ts",
   "module": "./dist/index.js",
   "type": "module",
-  "main": "./dist/index.js"
+  "main": "./dist/index.js",
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
 }

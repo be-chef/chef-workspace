@@ -26,8 +26,11 @@ jobs:
       - name: Set SHAs for Nx
         uses: nrwl/nx-set-shas@v4
 
-      - name: Run Chromatic command
-        env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-        run: |
-          npx nx chromatic slushy --skip-nx-cache
+      - name: Publish Slushy to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: libs/slushy/storybook-static
+          buildScriptName: npx nx build-storybook slushy
+
+

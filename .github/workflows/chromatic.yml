@@ -36,5 +36,3 @@ jobs:
           npx nx chromatic slushy --skip-nx-cache
         env:
           CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-
-

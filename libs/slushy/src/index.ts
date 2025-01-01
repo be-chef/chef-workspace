@@ -1,1 +1,1 @@
-export * from './lib/slushy';
+export * from './lib/components/button/Button';

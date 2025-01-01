@@ -3,6 +3,9 @@
   "include": [],
   "references": [
     {
+      "path": "../../libs/slushy"
+    },
+    {
       "path": "./tsconfig.app.json"
     },
     {

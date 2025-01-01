@@ -4,11 +4,10 @@ import { PropsWithChildren } from 'react';
 type ButtonProps = PropsWithChildren<{
   variant : 'primary' | 'secondary' | 'danger' | 'success' | 'warning' | 'info' | 'disabled';
   size: 'small' | 'medium' | 'large' | 'xlarge';
-  states : 'default' | 'hover' | 'active' | 'disabled';
   onClick?: () => void;
 }>;
 
-const Button: React.FC<ButtonProps>= ({children, variant, size, states, onClick}) => {
+export const Button: React.FC<ButtonProps>= ({children, variant, size, onClick}) => {
   const className = `btn btn-${variant} btn-${size}`;
 
   return (
@@ -17,5 +16,3 @@ const Button: React.FC<ButtonProps>= ({children, variant, size, states, onClick}
     </button>
   );
 }
-
-export default Button;

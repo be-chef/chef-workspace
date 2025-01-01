@@ -1,0 +1,104 @@
+$lighter-variants: (
+  primary: var(--blue-500),
+  danger: var(--red-500),
+  info: var(--blue-300)
+);
+
+$darker-variants :(
+  secondary: var(--grey-200),
+  success: var(--green-500),
+  disabled: var(--grey-300),
+  warning: var(--yellow-500)
+);
+
+$hover-variants: (
+  primary: var(--blue-700),
+  secondary: var(--grey-500),
+  danger: var(--red-600),
+  success: var(--green-700),
+  warning: var(--yellow-700),
+  info: var(--blue-700),
+  disabled: var(--grey-500)
+);
+
+$borders: (
+  primary: var(--blue-600),
+  secondary: var(--grey-400),
+  danger: var(--red-600),
+  success: var(--green-600),
+  warning: var(--yellow-600),
+  info: var(--blue-400),
+  disabled: var(--grey-400)
+);
+
+$sizes: (
+  small: (
+    padding: 8px 10px,
+    font-size: 12px
+  ),
+  medium: (
+    padding: 10px 12px,
+    font-size: 14px
+  ),
+  large: (
+    padding: 12px 14px,
+    font-size: 16px
+  ),
+  xlarge: (
+    padding: 14px 16px,
+    font-size: 18px
+  )
+);
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+
+  @each $variant, $color in $lighter-variants {
+    &-#{$variant} {
+      background-color: $color;
+      color: var(--white);
+
+      &:hover {
+        background-color: map-get($hover-variants , $variant )
+      }
+    }
+  }
+
+  @each $variant, $color in $darker-variants {
+    &-#{$variant} {
+      background-color: $color;
+      color: var(--black);
+
+      &:hover {
+        background-color: map-get($hover-variants , $variant )
+      }
+
+      &.btn-disabled {
+        background-color: map-get($darker-variants, disabled);
+        cursor: not-allowed;
+        opacity: 0.6;
+        color: var(--grey-500);
+      }
+    }
+  }
+
+  @each $size, $properties in $sizes {
+    &-#{$size} {
+      padding: map-get($properties, padding );
+      font-size: map-get($properties, font-size);
+    }
+  }
+
+  @each $border, $colorcode in $borders {
+    &-#{$border}{
+      border-color: $colorcode
+    }
+  }
+}

@@ -29,6 +29,10 @@
     "sourceMap": false,
     "strict": true,
     "target": "es2022",
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": false,
+    "paths": {
+      "@chef-workspace/slushy": ["./libs/slushy/src/index.ts"],
+      "@chef-workspace/slushy-scss": ["./libs/slushy/scss"]
+    }
   }
 }

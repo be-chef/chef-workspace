@@ -1,10 +1,16 @@
 const { NxAppWebpackPlugin } = require('@nx/webpack/app-plugin');
 const { NxReactWebpackPlugin } = require('@nx/react/webpack-plugin');
-const { join } = require('path');
+const { join, resolve } = require('path');
 
 module.exports = {
   output: {
     path: join(__dirname, '../../dist/apps/chef-react'),
+  },
+  resolve:{
+    alias: {
+      '@chef-workspace/slushy': resolve(__dirname, "../../libs/slushy/src/index.ts"),
+      '@chef-workspace/slushy-scss': resolve(__dirname, "../../libs/slushy/scss")
+    }
   },
   devServer: {
     port: 4200,

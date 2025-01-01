@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div>
      <h1>Welcome to Chef!!</h1>
-      <Button size="small" variant="success"> Are you sure? </Button>
+      <Button size="small" variant="success" onClick={()=>{alert("Happy New Year!!")}}> Are you sure? </Button>
     </div>
   );
 }

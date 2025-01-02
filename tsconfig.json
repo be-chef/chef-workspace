@@ -14,6 +14,9 @@
     },
     {
       "path": "./apps/chef-express"
+    },
+    {
+      "path": "./scripts"
     }
   ],
   "ts-node": {

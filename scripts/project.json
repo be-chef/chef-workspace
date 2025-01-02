@@ -1,0 +1,19 @@
+{
+  "sourceRoot": "scripts/src",
+  "projectType": "library",
+  "name": "scripts",
+  "targets" : {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+          "jestConfig": "{projectRoot}/jest.config.ts"
+      }
+    },
+    "generate-release-file" : {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "ts-node scripts/src/lib/publish-package.ts"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@chef-workspace/plugins",
+  "sourceRoot": "tools/plugins/src/generators/release-file",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "tools/plugins/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

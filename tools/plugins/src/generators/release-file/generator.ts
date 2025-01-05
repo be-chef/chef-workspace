@@ -11,8 +11,6 @@ export default async function (tree: Tree, schema: ReleaseFileOptions) {
   
   try{
     await generateReleaseFile(tree, schema)
-    await formatFiles(tree);
-    
     console.log("release-file.json generated successfully. Please raise a pull request for your branch, the appropriate package would be deployed by the Github's CD workflow");
     const message = "chore: version release";
     await commit(message);

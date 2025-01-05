@@ -1,0 +1,43 @@
+{
+  "name": "@chef-workspace/plugins",
+  "version": "0.0.1",
+  "generators": "./generators.json",
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "private": true,
+  "nx": {
+    "sourceRoot": "tools/plugins/src",
+    "projectType": "library",
+    "targets": {
+      "build": {
+        "executor": "@nx/js:tsc",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "options": {
+          "outputPath": "tools/plugins/dist",
+          "main": "tools/plugins/src/index.ts",
+          "tsConfig": "tools/plugins/tsconfig.lib.json",
+          "rootDir": "tools/plugins/src",
+          "generatePackageJson": false,
+          "assets": [
+            {
+              "input": "./tools/plugins/src",
+              "glob": "**/!(*.ts)",
+              "output": "."
+            },
+            {
+              "input": "./tools/plugins/src",
+              "glob": "**/*.d.ts",
+              "output": "."
+            }
+          ]
+        }
+      }
+    },
+    "name": "plugins"
+  }
+}

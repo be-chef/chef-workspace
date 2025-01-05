@@ -1,0 +1,1 @@
+export { releaseFileGenerator } from './generators/release-file/compact';

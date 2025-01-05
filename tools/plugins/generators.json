@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "plugins",
+  "version": "0.0.1",
+  "generators": {
+    "generate-release-file": {
+        "factory": "./src/generators/release-file/generator",
+        "schema": "./src/generators/release-file/schema.json",
+        "description": "release-file generator"
+    }
+  }
+}

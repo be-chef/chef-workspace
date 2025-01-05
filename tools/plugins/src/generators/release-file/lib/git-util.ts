@@ -9,7 +9,8 @@ export const isGitClean = (): Boolean =>{
 export const commit = (message: string): void =>{
   try {
     // Stage all changes
-    execSync('git status', { cwd: workspaceRoot, stdio: 'inherit' });
+    execSync('git add .');
+    execSync(`git commit -m "${message}" `);
 
     console.log("Changes committed successfully.");
   } catch (error) {
